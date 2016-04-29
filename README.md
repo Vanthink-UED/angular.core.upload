@@ -31,9 +31,9 @@ var app =angular.module('demo',['van.core.upload'])
 
 `on-success-upload`: after finish your uploading your callback @function;required;
 
-'input-of-file': upload file form name @string;required
+`input-of-file`: upload file form name @string;required
 
-'extensions': limit the file type @string eg:jpg,png;
+`extensions`: limit the file type @string eg:jpg,png;
 
 
 ### MIT LICENSE
