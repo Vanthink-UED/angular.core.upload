@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>AngularAMD-Seeds</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<style>
+    .button {
+	   position: relative;
+        width: 200px;
+        height: 200px;
+        background: #ddd;
+    }
+</style>    
+<script src="http://s1.vued.vanthink.cn/jquery-1.10.2.js"></script>
+<script src="http://s1.vued.vanthink.cn/0433631a4e17/angular-1.5.3.min.js"></script>
+</head>
+
+<body class="loading" ng-app="demo">
+ <h1>测试上传</h1>   
+<div ng-controller="test">
+<div class="button" url="upload.php" extensions="jpg,png" input-of-file="image" on-success-upload="upload(data)" van-core-upload>点击上传</div>    
+
+    </div>
+    
+    
+<script src="../src/angular.core.upoad.js" ></script>   
+<script type="application/javascript">
+    var app =angular.module('demo',['van.core.upload'])
+    
+    app.controller('test', function ($scope) {
+        $scope.upload = function(data) {
+            alert(data);
+        }
+    })
+    
+</script>   
+    
+</body>
+</html>
