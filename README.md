@@ -2,7 +2,7 @@
 
 A light weight upload plugin for upload
 
-[DEMO]()
+[DEMO](http://events.jackpu.com/angular.core.upload/)
 
 ### start
 
