@@ -125,10 +125,14 @@ angular.module('van.core.upload',[])
                         'Content-Type': undefined
                     },
                 }).then(function(res) {
+                    $form.find("input[type=file]").val('');
+                    $form.find("input[type=file]").attr("disabled", false);
                     $loading.remove();
                     $scope.onSuccessUpload(res);
 
                 },function errorCallback(response) {
+                    $form.find("input[type=file]").val('');
+                    $form.find("input[type=file]").attr("disabled", false);
                     $loading.remove();
                     console.error(response);
                 });
