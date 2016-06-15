@@ -1,6 +1,6 @@
 {
   "name": "angular.core.upload",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "a upload plugin for upload",
   "main": "index.js",
   "scripts": {
