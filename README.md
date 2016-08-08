@@ -1,6 +1,6 @@
 # angular.core.upload 上传组件
 
-A light weight(2.1KB)upload plugin for upload
+A light weight(2.1KB)upload plugin for uploading
 
 [DEMO](http://events.jackpu.com/angular.core.upload/)
 
