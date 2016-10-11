@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>Angular Core Image Upload Demo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1,maximum-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection" />
+
+    <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css"> -->
+    <link rel="stylesheet" href="./demo.css">
+    <!-- <link rel="stylesheet" href="./googlecode.css"> -->
+</head>    
+<body ng-app="myapp">
+
+    <div ng-controller="myCtrl">
+        <div id="my" upload url="upload" input-of-file="files[]" uploaded-callback="uploaded()" isCrop='true'>
+            上传图片
+        </div>
+        <!-- <div class="modal">
+            <div class="wrap-img">
+                <img class="preview" src="http://img1.vued.vanthink.cn/vtimgaef846bebea3271b0c48bc571222b37c-47220160624170005.png">
+                <div class="crop"></div>
+            </div>
+        </div> -->
+    </div>
+
+</body>
+<script type="text/javascript" src="./angular.min.js"></script>
+<script type="text/javascript" src="http://s1.vued.vanthink.cn/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="demo.js"></script>
+</html>
