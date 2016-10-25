@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>Angular Core Image Upload Demo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1,maximum-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection" />
+
+</head>    
+<body style="padding:0;margin:0">
+
+    <div id="wrap" style="width:400px;height: 400px;background-color: #ccc;margin-left: 200px">
+        <div id="crop" style="width:100px;height: 100px;background-color: #03A9F4;margin-left:100px"></div>
+    </div>
+
+</body>
+<!-- <script type="text/javascript" src="./angular.min.js"></script> -->
+
+<script type="text/javascript">
+var wrap = document.getElementById('wrap');
+var crop = document.getElementById('crop');
+
+function changeType (){
+    //增加或者减少的尺寸
+    var x, y;
+
+    var isClick = false;
+    document.onmousemove = function(e) {
+        var mx = e.clientX;
+        var my = e.cliernY;
+
+        var wx = wrap.offsetLeft;
+        var wy = wrap.offsetTop;
+
+        var cx = crop.offsetLeft;
+        var cy = crop.offsetTop;
+
+        x = mx - cx - crop.offsetWidth;        
+
+        document.onmousedown = function (){
+            if(Math.abs(x) <3) {
+
+                console.log('click');
+                isClick = true;
+            }
+
+        }
+
+        if(isClick) {
+            console.log('start change' + Math.abs(x));
+            var style = crop.style;
+            style.width = style.height = x + crop.offsetWidth + 'px';
+        }
+
+        document.onmouseup = function () {
+            isClick = false;
+        }
+        
+
+    }
+
+}
+
+changeType();
+
+
+</script>
+
+</html>
